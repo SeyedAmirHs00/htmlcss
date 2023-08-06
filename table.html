@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .famous-table {
+            margin: 20px auto;
+            table-layout: fixed;
+            border-collapse: collapse;
+            width: 80%;
+            border: 1px solid black;
+            background-color: rgb(234, 245, 255);
+        }
+        .famous-table thead {
+            border: 1px solid black;
+        }
+        .famous-table thead th:nth-child(1) {
+            width: 12%;
+        }
+        .famous-table thead th:nth-child(2) {
+            width: 20%;
+        }
+        .famous-table thead th:nth-child(3) {
+            width: 23%;
+        }
+        .famous-table thead th:nth-child(4) {
+            width: 15%;
+        }
+        .famous-table thead th:nth-child(5) {
+            width: 30%;
+        }
+        .famous-table thead tr {
+            background-color: rgb(222,240, 255);
+        }
+        .famous-table tbody tr:nth-child(even) {
+            background-color: rgb(247, 252, 255);
+        }
+        .famous-table tbody tr td:nth-child(2), .famous-table tbody tr td:nth-child(3) {
+            text-align: center;
+        }
+        .famous-table td, .famous-table th {
+            padding: 20px 30px;
+        }
+
+        .famous-table tbody tr:hover {
+            background-color: rgb(212, 230, 245);
+            transition: ease-in 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <table class="famous-table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Birth Year</th>
+                    <th>University</th>
+                    <th>Major</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Cena</td>
+                    <td>1977</td>
+                    <td>Springfield</td>
+                    <td>Exercise Physiology</td>
+                </tr>
+                <tr>
+                    <td>Calvin</td>
+                    <td>Broadus (Who dis?)</td>
+                    <td>1971</td>
+                    <td>Compton</td>
+                    <td>?</td>
+                </tr>
+                <tr>
+                    <td>Mark</td>
+                    <td>Zuckerberg</td>
+                    <td>1984</td>
+                    <td>Harvard</td>
+                    <td>Psychology & Computer Science</td>
+                </tr>
+                <tr>
+                    <td>Elon</td>
+                    <td>Musk</td>
+                    <td>1971</td>
+                    <td>Upenn & Wharton</td>
+                    <td>Physics & Economics</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

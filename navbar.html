@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            font-family: Calibri;
+            background-color: rgb(160, 0, 0);
+        }
+
+        .navbar-list {
+            list-style-type: none;
+            display: flex;
+            color: white
+        }
+        .navbar-list li a {
+            display: block;
+            color: white;
+            padding: 20px 30px;
+            text-decoration: none;
+            cursor: default;
+        }
+        .navbar-list li:hover a{
+            border-radius: 10px;
+            background-color: rgb(200, 0, 0);
+            text-decoration: underline;
+            transition: ease-in 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Contact Me</a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>

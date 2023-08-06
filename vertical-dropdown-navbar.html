@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop down navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-bar {
+            background-color: rgb(255, 99, 71);
+            position: fixed;
+            width: 150px;
+            height: 100%;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 20px 30px;
+            color: white;
+        }
+
+        .nav-bar a:hover {
+            background-color: rgb(215, 59, 31);
+        }
+
+        .nav-bar .dropdown {
+            position: relative
+        }
+
+        .nav-bar .dropdown-content {
+            background-color: rgb(255, 99, 71);
+            list-style-type: none;
+            display: none;
+            position: fixed;
+            width: 150px;
+            height: 100%;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            left: 150px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <ul>
+                <li class="dropdown">
+                    <a href="">tab1</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">item1</a></li>
+                        <li><a href="">item2</a></li>
+                        <li><a href="">item3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="">tab2</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">item4</a></li>
+                        <li><a href="">item5</a></li>
+                        <li><a href="">item6</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="">tab3</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">item7</a></li>
+                        <li><a href="">item8</a></li>
+                        <li><a href="">item9</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>

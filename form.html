@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Calibri;
+        }
+        .signup-form {
+            width: 400px;
+            border: 1px solid black;
+            padding: 2em 1.5em;
+            border-radius: 1em;
+            margin: 20px auto;
+            background-color: rgb(230, 238, 250);
+        }
+        .signup-form h2 {
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1px solid black;
+        }
+        .signup-form ul {
+            list-style-type: none;
+            margin-top: 1em;
+        }
+        .signup-form li {
+            margin-top: 1em;
+        }
+        .signup-form fieldset {
+            border: none;
+        }
+        .signup-form label {
+            display: inline-block;
+            min-width: 50%;
+        }
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"],
+        .signup-form input[type="tel"] {
+            width: 45%;
+            padding: 5px;
+            border: 1px solid rgb(130, 138, 150);
+            border-radius: 5px;
+        }
+
+        .signup-form input:hover,
+        .signup-form input:focus {
+            background-color: rgb(235, 235, 250);
+        }
+    
+        .signup-form input:focus {
+            outline-color: rgba(0, 100, 255, 1) !important;
+        }
+        .signup-form input[type="password"]:focus {
+            outline-color: rgba(255, 0, 0, 1) !important;
+
+        }
+
+        .signup-form ul .submit {
+            display: flex;
+            justify-content: space-around;
+        }
+        .signup-form button {
+            color: white;
+            border-radius: 10px;
+            border: none;
+            padding: 15px;
+            background-color: rgb(30, 100, 220);
+        }
+        .signup-form button:hover {
+            background-color: rgb(50,120, 240);
+        }
+    </style>
+</head>
+
+
+<body>
+    <main>
+        <form action="" method="POST" class="signup-form">
+            <h2>Sign Up Form</h2>
+            <ul>
+                <li>
+                    <label for="first-name">First name:</label>
+                    <input type="text" name="user_first_name" id="first-name" placeholder="Bill">
+                </li>
+                <li>
+                    <label for="last-name">Last name:</label>
+                    <input type="text" name="user_last_name" id="last-name" placeholder="Gates">
+                </li>
+                <li>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="user_email" id="email" placeholder="example@email.com">
+                </li>
+                <li>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="09314208569">
+                </li>
+                <li>
+                    <label for="pass">Password:</label>
+                    <input type="password" name="user_password" id="pass" placeholder="A safe password">
+                </li>
+                <li>
+                    <label for="confirm-pass">Confirm password:</label>
+                    <input type="password" name="confirm_password" id="confirm-pass" placeholder="Repeat safe password">
+                </li>
+                <li>
+                    <fieldset>
+                        <legend>Gender:</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="gender" id="male" value="male">
+                                <label for="male">Male</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="female">Female</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gender" id="not-say" value="not_say">
+                                <label for="not-say">Rather not say</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </li>
+                <li>
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement">I agree with the <a href="">terms of service</a>.</label>
+                </li>
+                <li class="submit">
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+        </form>
+    </main>
+</body>
+
+</html>

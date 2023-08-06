@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .animated-image {
+            margin: auto;
+            height: 100%;
+            text-align: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .animated-image img{
+            animation: rotation, blink;
+            animation-duration: 1.8s, 0.6s;
+            animation-timing-function: linear, linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes blink {
+            from {
+                opacity: 100%;
+            }
+            50% {
+                opacity: 0%;
+            }
+            to {
+                opacity: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="animated-image">
+            <img src="wheel.jpeg" alt="wheel">
+        </div>
+    </main>
+</body>
+
+</html>

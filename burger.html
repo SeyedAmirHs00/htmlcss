@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav-bar {
+            position: fixed;
+            width: 100%;
+            background-color: green;
+        }
+
+        .burger-menu {
+            display: none;
+        }
+        
+        .nav-link .nav-link-list {
+            list-style-type: none;
+            display: flex;
+        }
+        .nav-link .nav-link-list li {
+            padding: 20px 30px;
+            text-align: center;
+        }
+        .nav-link .nav-link-list li a {
+            color: white;
+        }
+        .nav-link .nav-link-list li:hover {
+            background-color: rgb(0, 104, 0);
+        }
+
+        @media screen and (max-width: 1024px){
+            .nav-bar {
+                height: 100%;
+                width: 30%;
+            }
+            .nav-link .nav-link-list {
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .nav-bar {
+                height: auto;
+                width: auto;
+                padding: 5px 10px;
+                top: 10px;
+                left: 10px;
+                border-radius: 10px;
+            }
+            .nav-link {
+                display: none;
+            }
+            .nav-bar .burger-menu {
+                display: block;
+            }
+            .nav-bar .burger-menu input {
+                display: none;
+            }
+            .nav-bar .burger-menu label div {
+                background-color: white;
+                height: 4px;
+                width: 25px;
+                border-radius: 3px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="burger-menu">
+                <input type="checkbox" name="burger-check" id="burger-check">
+                <label for="burger-check">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label>
+            </div>
+            <div class="nav-link">
+                <ul class="nav-link-list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Project</a></li>
+                    <li><a href="">About Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
