@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Radio Button</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        html,
+        body {
+            color: rgb(212, 212, 212);
+            height: 100%;
+            background-color: black;
+        }
+
+        .notice {
+            color: black;
+            background-color: rgb(155, 222, 0);
+            padding: 30px 40px;
+        }
+
+        .notice h1 {
+            font-size: 30px;
+        }
+
+        .notice p {
+            font-size: 20px;
+        }
+
+        .fancy-radio-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .fancy-radio-list>li {
+            margin-top: 30px;
+            padding: 10px 0;
+            border-bottom: 1px rgb(70, 70, 70) solid;
+        }
+
+        .form-fieldset {
+            border: none
+        }
+
+
+        .form-article {
+            width: 600px;
+            margin: 30px auto;
+            font-size: 20px;
+        }
+
+
+        .fancy-radio {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgb(212, 212, 212);
+            border-radius: 20px;
+            transform: translate(0, 3px);
+        }
+
+        .fancy-radio::before {
+            display: block;
+            content: "";
+            background-color: rgb(212, 212, 212);
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            transform: translate(2px, 2px) scale(0);
+            transition: ease-in 0.3s;
+        }
+
+        .fancy-radio:checked::before {
+            transform: translate(2px, 2px) scale(1);
+            transition: cubic-bezier(0.25, 0.25, 0.56, 2) 0.3s;
+        }
+
+        .fancy-radio-list>li:hover,
+        .fancy-radio-list>li:hover .fancy-radio {
+            color: white;
+            border-color: white;
+            transition: all ease-in 0.3s;
+        }
+
+        .fancy-radio-list>li:hover .fancy-radio::before {
+            background-color: white;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article class="notice">
+            <h1>Hey! read me...</h1>
+            <p>This is an example of radio button with pure html css</p>
+        </article>
+        <article class="form-article">
+            <form action="" class="fancy">
+                <fieldset class="form-fieldset">
+                    <legend>Your favorite food?</legend>
+                    <ul class="fancy-radio-list">
+                        <li>
+                            <input class="fancy-radio" type="radio" name="food" id="piza" value="piza">
+                            <label for="piza">Pizza</label>
+                        </li>
+                        <li>
+                            <input class="fancy-radio" type="radio" name="food" id="rice" value="rice">
+                            <label for="rice">Rice</label>
+                        </li>
+                        <li>
+                            <input class="fancy-radio" type="radio" name="food" id="bread" value="bread">
+                            <label for="bread">Bread</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p>Made with 💕 by SeyedAmirHs </p>
+    </footer>
+
+</body>
+
+</html>
