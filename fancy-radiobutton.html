@@ -91,6 +91,19 @@
             background-color: white;
         }
 
+        .fancy-radio:indeterminate {
+            animation: change-border 0.3s ease-in infinite alternate;
+        }
+        
+        @keyframes change-border {
+            from {
+                border: 3px solid rgb(212, 212, 212);
+            }
+            to {
+                border: 6px solid rgb(212, 212, 212)
+            }
+        }
+
         footer {
             position: absolute;
             bottom: 0;
